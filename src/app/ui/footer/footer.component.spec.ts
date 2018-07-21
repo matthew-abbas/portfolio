@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
+import { Component } from '@angular/core';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -8,9 +9,11 @@ describe('FooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        FooterComponent,
+        MockFaIconComponent
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -23,3 +26,10 @@ describe('FooterComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+@Component({
+  selector: 'fa-icon',
+  template: ''
+})
+class MockFaIconComponent {  
+}

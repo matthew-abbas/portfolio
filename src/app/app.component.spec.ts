@@ -1,11 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        MockNavComponent
       ]
     }).compileComponents();
   }));
@@ -15,3 +17,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 });
+
+@Component({
+  selector: 'app-layout',
+  template: ''
+})
+class MockNavComponent {  
+}

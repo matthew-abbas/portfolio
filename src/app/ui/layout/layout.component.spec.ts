@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LayoutComponent } from './layout.component';
+import { Component } from '@angular/core';
 
 describe('LayoutComponent', () => {
   let component: LayoutComponent;
@@ -8,7 +9,12 @@ describe('LayoutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LayoutComponent ]
+      declarations: [
+        LayoutComponent,
+        MockRouterOutletComponent,
+        MockHeaderComponent,
+        MockFooterComponent
+      ]
     })
     .compileComponents();
   }));
@@ -23,3 +29,24 @@ describe('LayoutComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+@Component({
+  selector: 'router-outlet',
+  template: ''
+})
+class MockRouterOutletComponent {  
+}
+
+@Component({
+  selector: 'app-header',
+  template: ''
+})
+class MockHeaderComponent {  
+}
+
+@Component({
+  selector: 'app-footer',
+  template: ''
+})
+class MockFooterComponent {  
+}
