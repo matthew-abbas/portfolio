@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrom 2.37"
+    "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37"
   },
   "private": true,
   "postinstall": "cd ./node_modules/protractor && npm i webdriver-manager@latest",
