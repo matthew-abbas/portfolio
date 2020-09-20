@@ -24,6 +24,7 @@ before_script:
 
 script: 
   - ng test --watch false --karma-config './src/karma.conf.js'
+  - npm run webdriver-update-ci
   - npm run e2e --webdriver-update=false
   - ng build
 
