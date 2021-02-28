@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  authTokenServiceUrl: "http://localhost:5000/User?secret=",
+  authTokenSecret: "dummy-dummy-dummy",
+  textAnalysisServiceUrl: "http://localhost:5000/ExternalSiteContent"
 };
 
 /*

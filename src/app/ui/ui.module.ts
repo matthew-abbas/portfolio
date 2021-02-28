@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ProjectComprehendComponent } from './pages/project-comprehend/project-comprehend.component';
 
 // Adding an icon to the library exposes it to other components.
 library.add(faCrown);
@@ -21,11 +22,14 @@ const appRoutes: Routes = [
   { path: 'skills', component: SkillsComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '',
+  { path: 'project-comprehend', component: ProjectComprehendComponent },
+  {
+    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  { path: '**',
+  {
+    path: '**',
     redirectTo: '/home',
     pathMatch: 'full'
   }
@@ -40,7 +44,7 @@ const appRoutes: Routes = [
       { enableTracing: true }
     )
   ],
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent, HomeComponent, SkillsComponent, ExperienceComponent, ContactComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, HomeComponent, SkillsComponent, ExperienceComponent, ContactComponent, ProjectComprehendComponent],
   exports: [
     LayoutComponent
   ]
