@@ -25,7 +25,7 @@ export class ProjectComprehendComponent implements OnInit {
   getToken() {
     if (!this.jwtGenDateTime || (Date.now() - this.jwtGenDateTime) > this.hour) {
       this.jwtGenDateTime = Date.now();
-      this.jwt = this.http.get<string>(environment.authTokenServiceUrl + environment.authTokenSecret, {
+      this.jwt = this.http.get<string>(environment.authTokenServiceUrl + encodeURIComponent(environment.authTokenSecret), {
         responseType: 'text' as 'json'
       });
     }
